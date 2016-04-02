@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Medical Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Dob</th>
+      <th>Sex</th>
+      <th>Phone number</th>
+      <th>Address</th>
+      <th>Allergies</th>
+      <th>Insurance</th>
+      <th>Emergency contact</th>
+      <th>Blood type</th>
+      <th>Pre exsisting medical conditions</th>
+      <th>Primary doctor</th>
+      <th>Medication</th>
+      <th>Previous injuries</th>
+      <th>Past hospital visits</th>
+      <th>Reason for er visit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medical_records.each do |medical_record| %>
+      <tr>
+        <td><%= medical_record.name %></td>
+        <td><%= medical_record.dob %></td>
+        <td><%= medical_record.sex %></td>
+        <td><%= medical_record.phone_number %></td>
+        <td><%= medical_record.address %></td>
+        <td><%= medical_record.allergies %></td>
+        <td><%= medical_record.insurance %></td>
+        <td><%= medical_record.emergency_contact %></td>
+        <td><%= medical_record.blood_type %></td>
+        <td><%= medical_record.pre_exsisting_medical_conditions %></td>
+        <td><%= medical_record.primary_doctor %></td>
+        <td><%= medical_record.medication %></td>
+        <td><%= medical_record.previous_injuries %></td>
+        <td><%= medical_record.past_hospital_visits %></td>
+        <td><%= medical_record.reason_for_ER_visit %></td>
+        <td><%= link_to 'Show', medical_record %></td>
+        <td><%= link_to 'Edit', edit_medical_record_path(medical_record) %></td>
+        <td><%= link_to 'Destroy', medical_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Medical record', new_medical_record_path %>

@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @medical_record.name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @medical_record.dob %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @medical_record.sex %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @medical_record.phone_number %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @medical_record.address %>
+</p>
+
+<p>
+  <strong>Allergies:</strong>
+  <%= @medical_record.allergies %>
+</p>
+
+<p>
+  <strong>Insurance:</strong>
+  <%= @medical_record.insurance %>
+</p>
+
+<p>
+  <strong>Emergency contact:</strong>
+  <%= @medical_record.emergency_contact %>
+</p>
+
+<p>
+  <strong>Blood type:</strong>
+  <%= @medical_record.blood_type %>
+</p>
+
+<p>
+  <strong>Pre exsisting medical conditions:</strong>
+  <%= @medical_record.pre_exsisting_medical_conditions %>
+</p>
+
+<p>
+  <strong>Primary doctor:</strong>
+  <%= @medical_record.primary_doctor %>
+</p>
+
+<p>
+  <strong>Medication:</strong>
+  <%= @medical_record.medication %>
+</p>
+
+<p>
+  <strong>Previous injuries:</strong>
+  <%= @medical_record.previous_injuries %>
+</p>
+
+<p>
+  <strong>Past hospital visits:</strong>
+  <%= @medical_record.past_hospital_visits %>
+</p>
+
+<p>
+  <strong>Reason for er visit:</strong>
+  <%= @medical_record.reason_for_ER_visit %>
+</p>
+
+<%= link_to 'Edit', edit_medical_record_path(@medical_record) %> |
+<%= link_to 'Back', medical_records_path %>

@@ -1,0 +1,77 @@
+<%= form_for(@medical_record) do |f| %>
+  <% if @medical_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medical_record.errors.count, "error") %> prohibited this medical_record from being saved:</h2>
+
+      <ul>
+      <% @medical_record.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <label>DOB</label><br>
+    <%= f.date_select :dob,:start_year=>1920,:end_year=>2016 %>
+  </div>
+  <div class="field">
+    <%= f.label :sex %><br>
+    <%= f.text_field :sex %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :allergies %><br>
+    <%= f.text_field :allergies %>
+  </div>
+  <div class="field">
+    <%= f.label :insurance %><br>
+    <%= f.text_field :insurance %>
+  </div>
+  <div class="field">
+    <%= f.label :emergency_contact %><br>
+    <%= f.text_field :emergency_contact %>
+  </div>
+  <div class="field">
+    <%= f.label :blood_type %><br>
+    <%= f.text_field :blood_type %>
+  </div>
+  <div class="field">
+    <%= f.label :pre_exsisting_medical_conditions %><br>
+    <%= f.text_field :pre_exsisting_medical_conditions %>
+  </div>
+  <div class="field">
+    <%= f.label :primary_doctor %><br>
+    <%= f.text_field :primary_doctor %>
+  </div>
+  <div class="field">
+    <%= f.label :medication %><br>
+    <%= f.text_field :medication %>
+  </div>
+  <div class="field">
+    <%= f.label :previous_injuries %><br>
+    <%= f.text_field :previous_injuries %>
+  </div>
+  <div class="field">
+    <%= f.label :past_hospital_visits %><br>
+    <%= f.text_field :past_hospital_visits %>
+  </div>
+  <div class="field">
+    <%= f.label :reason_for_ER_visit %><br>
+    <%= f.text_field :reason_for_ER_visit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
